@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: rocket.chat
-  tag: lastest
+  tag: latest
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
