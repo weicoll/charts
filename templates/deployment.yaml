@@ -30,7 +30,7 @@ spec:
               protocol: TCP
           env:
            - name: MONGO_URL
-             value: {{ template "rocker-demo.mongo.fullname" . }}
+             value: {{ template "rocker-demo.mongodb.fullname" . }}
   
 #          livenessProbe:
 #            httpGet:
