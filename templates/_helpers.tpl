@@ -24,7 +24,7 @@ If release name contains chart name it will be used as a full name.
 {{- end -}}
 {{- end -}}
 
-{{- define "rocker-demo.mongo.fullname" -}}
+{{- define "rocker-demo.mongodb.fullname" -}}
 {{- $name := default .Chart.Name .Values.nameOverride -}}
 {{- printf "mongodb://%s-%s:27017/rocketchat" .Release.Name $name | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
