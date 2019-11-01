@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: rocketchat/hubot-rocketchat 
+  repository: rocket.chat:latest 
   tag: lastest
   pullPolicy: IfNotPresent
 
