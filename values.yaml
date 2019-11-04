@@ -129,9 +129,9 @@ mongodb:
   ## MongoDB custom user and database
   ## ref: https://github.com/bitnami/bitnami-docker-mongodb/blob/master/README.md#creating-a-user-and-database-on-first-run
   ##
-  # mongodbUsername: username
-  # mongodbPassword: password
-  # mongodbDatabase: database
+  mongodbUsername: bot 
+  mongodbPassword: botpassword
+  mongodbDatabase: bot
   
   ## Whether enable/disable IPv6 on MongoDB
   ## ref: https://github.com/bitnami/bitnami-docker-mongodb/blob/master/README.md#enabling/disabling-ipv6
