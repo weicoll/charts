@@ -153,6 +153,7 @@ mongodb:
   ##
   ## Can be used to specify command line flags, for example:
   ##
+  mongodbExtraFlags: mongod --smallfiles --oplogSize 128 --replSet rs0 --storageEngine=mmapv1
   ## mongodbExtraFlags:
   ##  - "--wiredTigerCacheSizeGB=2"
   mongodbExtraFlags: []
