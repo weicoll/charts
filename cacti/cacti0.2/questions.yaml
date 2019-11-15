@@ -1,0 +1,24 @@
+labels:
+  io.cattle.role: cluster # options are cluster/project
+questions:
+  - variable: admin.existingSecret
+    default: ""
+    description: "The name of an existing secret containing the admin credentials."
+    type: secret
+    group: "Cacti Settings"
+    label: Select Existing Admin Secret
+  - variable: adminUser
+    default: "admin"
+    description: "Cacti admin username"
+    type: string
+    group: "Cacti Settings"
+    label: Cacti Admin Username
+    required: true
+    show_if: "admin.existingSecret="
+  - variable: adminPassword
+    default: "ChangeMe"
+    description: "Cacti admin password"
+    type: password
+    group: "Cacti Settings"
+    label: Cacti Admin Password
+    show_if: "admin.existingSecret="
