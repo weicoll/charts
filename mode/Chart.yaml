@@ -19,5 +19,5 @@ maintainers:                                  #维护人员信息,[可选]
     name: weicoll                          #维护人员姓名,[可选]
     url: http://www.weicoll.com           #维护人员网址,[可选]
 engine: gotpl                                 #模板引擎,[可选, 默认gotpl]
-appVersion: 4.9.8                             #此包含的应用程序的版本
+appVersion: "1.0"                             #此包含的应用程序的版本
 #tillerVersion: 2.14.3                         #此版本需要请求的tiller的版本,[可选]
