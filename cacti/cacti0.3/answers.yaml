@@ -1,5 +1,0 @@
-defaultImage: true
-image.repository: bitnami/wordpress
-image.tag: 4.9.8-debian-9
-mariadb.image.repository: bitnami/mariadb
-mariadb.image.tag: 10.1.35-debian-9

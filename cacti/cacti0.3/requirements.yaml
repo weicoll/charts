@@ -1,7 +1,0 @@
-ependencies:                                                #配置依赖          
-- name: mariadb                                             #依赖的charts名称[必选]
-  version: 5.x.x                                            #依赖的charts版本[必选]
-  repository: https://github.com/WalkCloud/mariadb/charts   #依赖的charts存储库URL路径
-  condition: mariadb.enabled
-  tags:
-    - wordpress-database
