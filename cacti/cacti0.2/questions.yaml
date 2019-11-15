@@ -1,0 +1,24 @@
+labels:
+  io.cattle.role: cluster # options are cluster/project
+questions:
+  - variable: admin.existingSecret
+    default: ""
+    description: "The name of an existing secret containing the admin credentials."
+    type: secret
+    group: "Grafana Settings"
+    label: Select Existing Admin Secret
+  - variable: adminUser
+    default: "admin"
+    description: "Grafana admin username"
+    type: string
+    group: "Grafana Settings"
+    label: Grafana Admin Username
+    required: true
+    show_if: "admin.existingSecret="
+  - variable: adminPassword
+    default: ""
+    description: "Grafana admin password"
+    type: password
+    group: "Grafana Settings"
+    label: Grafana Admin Password
+    show_if: "admin.existingSecret="
