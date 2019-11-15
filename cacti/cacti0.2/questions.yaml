@@ -5,20 +5,20 @@ questions:
     default: ""
     description: "The name of an existing secret containing the admin credentials."
     type: secret
-    group: "Grafana Settings"
+    group: "Cacti Settings"
     label: Select Existing Admin Secret
   - variable: adminUser
     default: "admin"
-    description: "Grafana admin username"
+    description: "Cacti admin username"
     type: string
-    group: "Grafana Settings"
-    label: Grafana Admin Username
+    group: "Cacti Settings"
+    label: Cacti Admin Username
     required: true
     show_if: "admin.existingSecret="
   - variable: adminPassword
-    default: ""
-    description: "Grafana admin password"
+    default: "ChangeMe"
+    description: "Cacti admin password"
     type: password
-    group: "Grafana Settings"
-    label: Grafana Admin Password
+    group: "Cacti Settings"
+    label: Cacti Admin Password
     show_if: "admin.existingSecret="
