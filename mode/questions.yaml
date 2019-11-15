@@ -1,0 +1,29 @@
+questions:
+- variable: defaultImage
+  default: true
+  description: "Use default Docker image"
+  label: Use Default Image
+  type: boolean
+  show_subquestion_if: false
+  group: "Container Images"
+  subquestions:
+  - variable: image.repository
+    default: "bitnami/wordpress"
+    description: "WordPress image name"
+    type: string
+    label: WordPress Image Name
+  - variable: image.tag
+    default: "4.9.8-debian-9"
+    description: "WordPress image tag"
+    type: string
+    label: Image Tag
+  - variable: mariadb.image.repository
+    default: "bitnami/mariadb"
+    description: "MariaDB image name"
+    type: string
+    label: MariaDB Image Name
+  - variable: mariadb.image.tag
+    default: "10.1.35-debian-9"
+    description: "MariaDB image tag"
+    type: string
+    label: MariaDB Image Tag

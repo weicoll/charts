@@ -1,0 +1,62 @@
+replicaCount: 1                    #用于配置容器副本数量，
+statefulset:                       #配置statefulset有状态的应用负载 
+  enabled: false                   #statefulset关闭
+image:                             #用于配置kubernetes容器镜像，
+  registry: private.harbor.com     #配置私有的image仓库地址，默认docker.io
+  repository: bitnami/wordpress    #image名称，例如：nginx镜像
+  tag: 4.9.8-debian-9              #image tag
+  pullPolicy: IfNotPresent         #pull镜像的方式
+service:                           #用于修改kubernetes Service
+  type: ClusterIP                  #Service访问类型.
+  port: 80                         #应用端口暴露
+ingress:                           #用于修改kubernetes ingress  
+  enabled: false                   #ingress功能开启
+  annotations: {}                  #ingress的宣告信息
+  path: /
+  hosts:
+    - chart-example.local
+  tls: []
+env: []
+#  - name: DEMO_GREETING
+#    value: "Hello from the environment"
+#  - name: DEMO_FAREWELL
+#    value: "Such a sweet sorrow"
+config: []
+#  enabled: true
+#  mountPath: /conf 
+#  data:
+#    app.conf: |-
+#      appname = example-chart
+#    bpp.conf: |-
+#      bppname
+persistentVolume:                  #用于配置kubernetes持久化存储
+  enabled: true                    #pv功能开启
+# storageClass: "-"                #storageclass设置
+  accessMode: ReadWriteOnce        #pv权限编辑
+  size: 8Gi                        #pv容量设置
+  mountPaths: []
+  #  - name: data-storage
+  #    mountPath: /config
+  #    subPath: config
+  #  - name: data-storage
+  #    mountPath: /data
+  #    subPath: data
+resources:                         #用于kubenretes资源限制和配额
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+healthCheck:                        #用于配置kubernetes健康检查
+  enabled: true                     #健康检查功能开启
+  type: tcp                         #http/tcp
+  port: http                        #健康检查的端口名或端口
+  httpPath: '/'                     #http时必须设置
+  livenessInitialDelaySeconds: 10   #初始延迟秒数
+  livenessPeriodSeconds: 10         #检测周期，默认值10，最小为1
+  readinessInitialDelaySeconds: 10  #初始延迟秒数
+  readinessPeriodSeconds: 10        #检测周期，默认值10，最小为1
+nodeSelector: {}
+tolerations: []
+affinity: {}
