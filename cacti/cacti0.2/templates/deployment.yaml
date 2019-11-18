@@ -79,7 +79,7 @@ items:
           - name: DB_USER
             value: root
           - name: TZ
-            value: CST
+            value: Asia/Shanghai
           image: harbor.ddc.com/cacti/cacti
           imagePullPolicy: IfNotPresent
           name: cacti
